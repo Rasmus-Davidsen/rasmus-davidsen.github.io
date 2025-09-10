@@ -1,0 +1,36 @@
+body {
+	margin: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background-color: #3c3c3c;
+    width: 100dvw;
+    height: 100dvh;
+}
+			
+embed {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+/* Likely phone/tablet (touch only) */
+@media (hover: none) and (pointer: coarse) {
+    /* When width is greater than height (landscape) */
+    @media(min-aspect-ratio: 1/1) {
+        embed {
+            height: 100%;
+            aspect-ratio: 210 / 297;
+            width: auto;
+        }
+    }
+
+    /* When height is greater than width (portrait) */
+    @media(max-aspect-ratio: 1/1) {
+        embed {
+            width: 100%;
+            aspect-ratio: 210 / 297;
+            height: auto;
+        }
+    }
+}
